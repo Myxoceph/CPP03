@@ -6,11 +6,11 @@
 #    By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/08 20:10:29 by abakirca          #+#    #+#              #
-#    Updated: 2024/12/18 18:07:14 by abakirca         ###   ########.fr        #
+#    Updated: 2024/12/23 15:19:39 by abakirca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	scavtrap
+NAME			=	fragtrap
 
 CC				=	c++
 CFLAGS			=	-Wall -Werror -Wextra -std=c++98
@@ -20,7 +20,7 @@ RM				=	rm -rf
 SRCS_DIR		=	./srcs/
 OBJS_DIR		=	./objs/
 
-SRCS 			=	$(SRCS_DIR)main.cpp $(SRCS_DIR)ClapTrap.cpp $(SRCS_DIR)ScavTrap.cpp
+SRCS 			=	$(SRCS_DIR)main.cpp $(SRCS_DIR)ClapTrap.cpp $(SRCS_DIR)ScavTrap.cpp $(SRCS_DIR)FragTrap.cpp
 
 OBJS			=	$(patsubst $(SRCS_DIR)%.cpp, $(OBJS_DIR)%.o, $(SRCS))
 

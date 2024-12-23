@@ -6,15 +6,15 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:02:15 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/23 15:16:43 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/23 15:48:39 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-	ScavTrap Bob("Bob");
+	FragTrap Bob("Bob");
 	// ScavTrap Jim("Jim");
 	// ScavTrap Joe("Joe");
 	
@@ -22,10 +22,10 @@ int main()
 	Bob.Attack("Test");
 	Bob.takeDamage(50);
 	Bob.beRepaired(40);
-	Bob.guardGate();
+	Bob.highFivesGuys();
 	Bob.takeDamage(90);
 	Bob.beRepaired(10);
-	Bob.guardGate();
+	Bob.highFivesGuys();
 	std::cout << "--------------------------------------------" << std::endl;
 	// std::cout << "--------------------------------------------" << std::endl;
 	// std::cout << "\t\tHere comes Bob!" << std::endl;

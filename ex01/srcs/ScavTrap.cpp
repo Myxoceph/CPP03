@@ -6,12 +6,11 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:46:24 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/23 15:02:20 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/23 15:47:59 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
