@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:02:08 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/18 17:39:08 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/23 15:03:03 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ClapTrap::ClapTrap()
 {
 	std::cout << GREEN"Default constructor called."RESET << std::endl;
-	this->name = "";
+	this->name = "Myxoceph";
 	this->hitPoints = 10;
 	this->energyPoints = 10;
 	this->attackDamage = 0;
@@ -57,11 +57,11 @@ ClapTrap::~ClapTrap()
 void ClapTrap::Attack(const std::string& target)
 {
 	if (this->hitPoints > 0 && this->energyPoints > 0)
-		std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << std::endl;
+		std::cout << YELLOW"ClapTrap " << this->name << WHITE" attacks "RED << target << WHITE", causing " << this->attackDamage << " points of damage!"RESET << std::endl;
 	else if (this->energyPoints > 0)
-		std::cout << "ClapTrap " << this->name << " cannot attack " << target << " because they have " << this->hitPoints << " HP left." << std::endl;
+		std::cout << YELLOW"ClapTrap " << this->name << WHITE" cannot attack "RED << target << WHITE" because they have " << this->hitPoints << " HP left."RESET << std::endl;
 	else
-		std::cout << "ClapTrap " << this->name << " cannot attack " << target << " because they have " << this->energyPoints << " EP left." << std::endl;
+		std::cout << YELLOW"ClapTrap " << this->name << WHITE" cannot attack "RED << target << WHITE" because they have " << this->energyPoints << " EP left."RESET << std::endl;
 	if (this->hitPoints > 0 && this->energyPoints > 0)
 		this->energyPoints--;
 }
@@ -69,9 +69,9 @@ void ClapTrap::Attack(const std::string& target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->hitPoints > 0)
-		std::cout << "ClapTrap " << this->name << " takes " << amount << " damage to the face!" << std::endl;
+		std::cout << YELLOW"ClapTrap " << this->name << WHITE" takes " << amount << " damage to the face!"RESET << std::endl;
 	else
-		std::cout << "ClapTrap " << this->name << " cannot take any damage because they are gone already." << std::endl;
+		std::cout << YELLOW"ClapTrap " << this->name << WHITE" cannot take any damage because they are gone already."RESET << std::endl;
 	if (this->hitPoints > 0)
 		this->hitPoints -= amount;
 }
@@ -79,15 +79,15 @@ void ClapTrap::takeDamage(unsigned int amount)
 void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->energyPoints > 0 && this->hitPoints > 0)
-		std::cout << "Claptrap " << this->name << " restores " << amount << " HP!";
+		std::cout << YELLOW"ClapTrap " << this->name << WHITE" restores " << amount << " HP!"RESET;
 	else if (this->energyPoints > 0)
-		std::cout << "ClapTrap " << this->name << " cannot restore any HP because they are gone already!" << std::endl;
+		std::cout << YELLOW"ClapTrap " << this->name << WHITE" cannot restore any HP because they are gone already!"RESET << std::endl;
 	else
-		std::cout << "ClapTrap " << this->name << " cannot restore any HP because they have " << this->energyPoints << " EP left!" << std::endl;
+		std::cout << YELLOW"ClapTrap " << this->name << WHITE" cannot restore any HP because they have " << this->energyPoints << " EP left!"RESET << std::endl;
 	if (this->energyPoints > 0 && this->hitPoints > 0)
 	{
 		this->energyPoints--;
 		this->hitPoints += amount;
-		std::cout << " They now have " << this->hitPoints << " HP!" << std::endl;
+		std::cout << WHITE" They now have " << this->hitPoints << " HP!"RESET << std::endl;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:02:15 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/18 17:44:39 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/23 14:55:17 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,18 @@ int main()
 	// Joe = Jim;
 	
 	std::cout << "--------------------------------------------" << std::endl;
-	std::cout << "\t\tHere comes Bob!" << std::endl;
+	std::cout << WHITE"\t\tHere comes Bob!"RESET << std::endl << std::endl;
 	Bob.Attack("a Monster");
 	Bob.takeDamage(3);
 	Bob.beRepaired(5);
 	std::cout << "--------------------------------------------" << std::endl;
-	std::cout << "\t\tHere comes Jim!" << std::endl;
+	std::cout << WHITE"\t\tHere comes Jim!"RESET << std::endl << std::endl;
 	Jim.Attack("a Monster");
 	Jim.takeDamage(15);
 	Jim.beRepaired(5);
 	Jim.Attack("a Monster");
 	std::cout << "--------------------------------------------" << std::endl;
-	std::cout << "\t\tHere comes Joe!" << std::endl;
+	std::cout << WHITE"\t\tHere comes Joe!"RESET << std::endl << std::endl;
 	Joe.beRepaired(1);
 	Joe.beRepaired(1);
 	Joe.beRepaired(1);
