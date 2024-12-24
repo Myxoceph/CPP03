@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:46:24 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/23 15:47:59 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/24 20:44:24 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,15 @@ void ScavTrap::guardGate()
 		std::cout << CYAN"ScavTrap " << this->name << WHITE" shouts: \"You shall not pass here!\""RESET << std::endl;
 	else
 		std::cout << CYAN"ScavTrap " << this->name << WHITE" cannot guard the gate because they are gone!"RESET << std::endl;
+}
+
+void ScavTrap::showStats()
+{
+	std::cout << WHITE"=======================================" << std::endl;
+	std::cout << CYAN"ScavTrap " << this->name << "'s"WHITE << " stats are:"RESET << std::endl;
+	std::cout << GREEN"Hit Points -> "WHITE << this->hitPoints << std::endl;
+	std::cout << GREEN"Energy Points -> "WHITE << this->energyPoints << std::endl;
+	std::cout << GREEN"Attack Damage -> "WHITE << this->attackDamage << std::endl;
+	std::cout << WHITE"======================================="RESET << std::endl;
+	
 }

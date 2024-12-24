@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/23 15:20:00 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/24 20:33:23 by abakirca         ###   ########.fr       */
+/*   Created: 2024/12/24 20:08:32 by abakirca          #+#    #+#             */
+/*   Updated: 2024/12/24 20:34:53 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 #include "ScavTrap.hpp"
-#include <iostream>
+#include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class DiamondTrap : public FragTrap, public ScavTrap
 {
+	private :
+		std::string name;
+	
 	public :
-		FragTrap();
-		FragTrap(std::string newName);
-		FragTrap(const FragTrap &copy);
-		FragTrap &operator=(const FragTrap &copy);
-		~FragTrap();
-		void highFivesGuys(void);
+		DiamondTrap();
+		DiamondTrap(std::string newName);
+		DiamondTrap(const DiamondTrap &copy);
+		DiamondTrap &operator=(const DiamondTrap &copy);
+		~DiamondTrap();
+		void whoAmI();
 		void showStats();
 };
-
 
 #endif

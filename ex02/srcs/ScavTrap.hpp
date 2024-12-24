@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:46:26 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/23 15:46:54 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/24 20:33:36 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class ScavTrap : public ClapTrap
 		~ScavTrap();
 		void Attack(const std::string& target);
 		void guardGate();
+		void showStats();
 };
 
 #endif

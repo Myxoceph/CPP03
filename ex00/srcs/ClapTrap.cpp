@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:02:08 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/23 15:03:03 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/24 20:44:24 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,15 @@ void ClapTrap::beRepaired(unsigned int amount)
 		this->hitPoints += amount;
 		std::cout << WHITE" They now have " << this->hitPoints << " HP!"RESET << std::endl;
 	}
+}
+
+void ClapTrap::showStats()
+{
+	std::cout << WHITE"=======================================" << std::endl;
+	std::cout << YELLOW"ClapTrap " << this->name << "'s"WHITE << " stats are:"RESET << std::endl;
+	std::cout << GREEN"Hit Points -> "WHITE << this->hitPoints << std::endl;
+	std::cout << GREEN"Energy Points -> "WHITE << this->energyPoints << std::endl;
+	std::cout << GREEN"Attack Damage -> "WHITE << this->attackDamage << std::endl;
+	std::cout << WHITE"======================================="RESET << std::endl;
+	
 }

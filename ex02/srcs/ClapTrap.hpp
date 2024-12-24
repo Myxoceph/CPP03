@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:02:13 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/23 15:50:05 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/24 20:38:00 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #define BLUE "\033[1;34m"
 #define WHITE "\033[1;37m"
 #define RED "\033[1;31m"
+#define MAG "\033[1;35m"
 #define RESET "\033[0m"
 
 class ClapTrap
@@ -40,6 +41,7 @@ class ClapTrap
 		void Attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
+		void showStats();
 };
 
 
