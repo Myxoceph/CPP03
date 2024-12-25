@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:02:08 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/24 20:44:24 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/25 15:24:17 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ClapTrap::ClapTrap()
 {
 	this->name = "Myxoceph";
-	this->hitPoints = 10;
+	this->hitPoints = 100;
 	this->energyPoints = 10;
 	this->attackDamage = 0;
 	std::cout << GREEN"ClapTrap Default constructor called."RESET << std::endl;
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap()
 ClapTrap::ClapTrap(std::string newName)
 {
 	this->name = newName;
-	this->hitPoints = 10;
+	this->hitPoints = 100;
 	this->energyPoints = 10;
 	this->attackDamage = 0;
 	std::cout << GREEN"ClapTrap Constructor with name for "YELLOW << this->name << GREEN" called."RESET << std::endl;

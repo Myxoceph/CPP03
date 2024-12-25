@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 20:08:32 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/24 20:34:53 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/25 15:21:31 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
-class DiamondTrap : public FragTrap, public ScavTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 	private :
 		std::string name;

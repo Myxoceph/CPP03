@@ -6,13 +6,13 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 20:14:30 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/24 20:52:35 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/25 16:04:39 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap() : ClapTrap("Myxoceph")
+DiamondTrap::DiamondTrap() : ClapTrap()
 {
 	this->name = "Myxoceph";
 	this->hitPoints = FragTrap::hitPoints;
@@ -21,10 +21,11 @@ DiamondTrap::DiamondTrap() : ClapTrap("Myxoceph")
 	std::cout << GREEN"DiamondTrap Default constructor called."RESET << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string newName) : ClapTrap(newName + "_clap_name")
+DiamondTrap::DiamondTrap(std::string newName) : ClapTrap(newName), ScavTrap(newName), FragTrap(newName + "_clap_name")
 {
+	this->name = newName;
 	this->hitPoints = FragTrap::hitPoints;
-	this->energyPoints = ScavTrap::energyPoints;
+	this->energyPoints = ScavTrap().getEnergy();
 	this->attackDamage = FragTrap::attackDamage;
 	std::cout << GREEN"DiamondTrap Constructor with name for "BLUE << this->name << GREEN" called."RESET << std::endl;
 }
@@ -67,5 +68,4 @@ void DiamondTrap::showStats()
 	std::cout << GREEN"Energy Points -> "WHITE << this->energyPoints << std::endl;
 	std::cout << GREEN"Attack Damage -> "WHITE << this->attackDamage << std::endl;
 	std::cout << WHITE"======================================="RESET << std::endl;
-	
 }

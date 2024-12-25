@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 15:31:51 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/24 20:44:24 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/25 14:23:36 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 FragTrap::FragTrap() : ClapTrap()
 {
 	this->name = "Myxoceph";
-	this->hitPoints = 100;
+	this->hitPoints = ClapTrap::hitPoints;
 	this->energyPoints = 100;
 	this->attackDamage = 30;
 	std::cout << GREEN"FragTrap Default Constructor called!"RESET << std::endl;
@@ -24,7 +24,7 @@ FragTrap::FragTrap() : ClapTrap()
 FragTrap::FragTrap(std::string newName) : ClapTrap(newName)
 {
 	this->name = newName;
-	this->hitPoints = 100;
+	this->hitPoints = ClapTrap::hitPoints;
 	this->energyPoints = 100;
 	this->attackDamage = 30;
 	std::cout << GREEN"FragTrap Constructor with name for "MAG << this->name << GREEN" called!"RESET << std::endl;

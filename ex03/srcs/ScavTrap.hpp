@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:46:26 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/24 20:35:15 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/25 16:04:08 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ScavTrap : virtual public ClapTrap
 		ScavTrap &operator=(const ScavTrap &copy);
 		~ScavTrap();
 		void Attack(const std::string& target);
+		int getEnergy();
 		void guardGate();
 		void showStats();
 };

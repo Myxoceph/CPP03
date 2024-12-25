@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:46:24 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/24 20:44:24 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/25 16:04:26 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ScavTrap::ScavTrap() : ClapTrap()
 {
 	this->name = "Myxoceph";
-	this->hitPoints = 100;
+	this->hitPoints = ClapTrap::hitPoints;
 	this->energyPoints = 50;
 	this->attackDamage = 20;
 	std::cout << GREEN"ScavTrap Default constructor called."RESET << std::endl;
@@ -25,7 +25,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 ScavTrap::ScavTrap(std::string newName) : ClapTrap(newName)
 {
 	this->name = newName;
-	this->hitPoints = 100;
+	this->hitPoints = ClapTrap::hitPoints;
 	this->energyPoints = 50;
 	this->attackDamage = 20;
 	std::cout << GREEN"ScavTrap Constructor with name for "CYAN << this->name << GREEN" called."RESET << std::endl;
@@ -84,4 +84,9 @@ void ScavTrap::showStats()
 	std::cout << GREEN"Attack Damage -> "WHITE << this->attackDamage << std::endl;
 	std::cout << WHITE"======================================="RESET << std::endl;
 	
+}
+
+int ScavTrap::getEnergy()
+{
+	return this->energyPoints;
 }
