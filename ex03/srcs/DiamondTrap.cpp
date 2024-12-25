@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 20:14:30 by abakirca          #+#    #+#             */
-/*   Updated: 2024/12/25 16:04:39 by abakirca         ###   ########.fr       */
+/*   Updated: 2024/12/25 16:11:02 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ DiamondTrap::DiamondTrap() : ClapTrap()
 {
 	this->name = "Myxoceph";
 	this->hitPoints = FragTrap::hitPoints;
-	this->energyPoints = ScavTrap::energyPoints;
+	this->energyPoints = ScavTrap().getEnergy();
 	this->attackDamage = FragTrap::attackDamage;
 	std::cout << GREEN"DiamondTrap Default constructor called."RESET << std::endl;
 }
